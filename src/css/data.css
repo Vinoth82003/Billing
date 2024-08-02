@@ -1,0 +1,15 @@
+.table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+table.table th
+{
+    background: #000;
+    color: #fff;
+}
+
+table.table tr:nth-child(even){
+    background: #ddd;
+}
