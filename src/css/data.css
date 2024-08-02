@@ -13,3 +13,7 @@ table.table th
 table.table tr:nth-child(even){
     background: #ddd;
 }
+
+.load{
+    margin: 30px;
+}

@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../css/data.css";
-
 const Data = () => {
   const [tableData, setTableData] = useState([]);
     console.log("Hello");
     
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/`)
+    fetch(`https://billing-backend-psi.vercel.app/api/products/`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        
+
         setTableData(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -52,7 +51,7 @@ const Data = () => {
             </tr>
           </thead>
           <tbody>
-            {tableData.length > 0 ? <DisplayDetails /> : "No table data yet"}
+            {tableData.length > 0 ? <DisplayDetails /> : <h3 className="load">Loading.......please wait</h3>}
           </tbody>
         </table>
       </section>
